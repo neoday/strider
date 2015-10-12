@@ -1,3 +1,4 @@
+@import url(//fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,900);
 /*!
  * Bootstrap v2.3.2
  *
@@ -8584,9 +8585,6 @@ div.CodeMirror span.CodeMirror-nonmatchingbracket {
   font-weight: bold;
   margin-left: 5px;
 }
-#project_config_branches .branch-list .branch-item .ismaster {
-  margin-left: 40px;
-}
 #project_config_branches .branch-list .branch-item .remove i {
   padding: 0 10px;
 }
@@ -8667,7 +8665,7 @@ div.CodeMirror span.CodeMirror-nonmatchingbracket {
   margin-bottom: 5px;
 }
 #build-metadata .progress-meter {
-  min-width: 200px;
+  min-width: 50px;
 }
 #build-metadata .job-link-id {
   padding: 0 5px;
@@ -8675,6 +8673,9 @@ div.CodeMirror span.CodeMirror-nonmatchingbracket {
 }
 #build-metadata .committer img {
   max-width: 30px;
+}
+#build-metadata .current-build-menu .dropdown-menu {
+  top: 28px;
 }
 .commit-url .trigger-icon {
   font-size: 15px;
@@ -8838,7 +8839,7 @@ body.job_view footer {
   line-height: 27px;
 }
 .run-time time {
-  line-height: 36px;
+  line-height: 29px;
 }
 #dashboard .finished-at .cancel-job {
   font-size: 18px;
@@ -9049,6 +9050,10 @@ body {
 }
 body {
   background-color: #fff;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+h3 {
+  font-weight: normal;
 }
 .wrap {
   min-height: 100% !important;
@@ -9109,17 +9114,23 @@ body {
 .job_view .wrap .content .body-content > .row-fluid .span12 .app #build-page > div .job-main .job-wrap .job-left-col {
   height: 100%;
 }
-.job_view .wrap .content .body-content > .row-fluid .span12 .app #build-page > div .job-main .job-wrap .job-detail-sidebar {
+.job_view .wrap .content .body-content > .row-fluid .span12 .app #build-page > div .job-detail-sidebar {
   height: 100%;
 }
-.job_view .wrap .content .body-content > .row-fluid .span12 .app #build-page > div .job-main .job-wrap .job-detail-sidebar #list-of-builds {
-  height: 100%;
+.job_view .wrap .content .body-content > .row-fluid .span12 .app #build-page > div .job-detail-sidebar #list-of-builds {
+  height: 96%;
 }
 #build-page .job-title h3 .test-only-action {
   color: green;
 }
 #build-page .job-title h3 .test-and-deploy-action {
   color: #2900ff;
+}
+#build-page #list-of-builds {
+  overflow: auto;
+}
+#build-page #list-of-builds table {
+  margin-bottom: 0;
 }
 #build-page #list-of-builds table td {
   vertical-align: middle;
@@ -9302,7 +9313,6 @@ body {
 #dashboard table tr .project-name a {
   font-size: 18px;
   line-height: 27px;
-  font-weight: 700;
   width: 100%;
 }
 .dashboard-row .run-time,
@@ -9473,12 +9483,6 @@ footer p {
 #build-metadata {
   padding: 8px;
   border-radius: 3px;
-}
-#list-of-builds {
-  overflow: auto;
-}
-#list-of-builds table {
-  margin-bottom: 0;
 }
 #build-detail-buttons {
   border: 1px solid;

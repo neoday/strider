@@ -15,12 +15,16 @@ html, body {
 
 body {
   background-color: #fff;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+h3 {
+  font-weight: normal;
 }
 
 .wrap {
   min-height: 100% !important;
 }
-
 
 [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak],
 .ng-cloak, .x-ng-cloak {
@@ -69,12 +73,12 @@ body {
                       .job-left-col {
                         height: 100%;
                       }
-                      .job-detail-sidebar {
-                        height: 100%;
-                        #list-of-builds {
-                          height: 100%;
-                        }
-                      }
+                    }
+                  }
+                  .job-detail-sidebar {
+                    height: 100%;
+                    #list-of-builds {
+                      height: 96%;
                     }
                   }
                 }
@@ -99,8 +103,13 @@ body {
   }
 
   #list-of-builds {
-    table td {
-      vertical-align: middle;
+    overflow: auto;
+
+    table {
+      margin-bottom: 0;
+      td {
+        vertical-align: middle;
+      }
     }
 
     td.committer {
@@ -268,7 +277,6 @@ body {
     a {
       font-size: 18px;
       line-height: 27px;
-      font-weight: 700;
       width: 100%;
     }
   }
@@ -464,13 +472,6 @@ footer p {
 #build-metadata {
   padding: 8px;
   border-radius: 3px;
-}
-#list-of-builds {
-  overflow: auto;
-
-  table {
-    margin-bottom: 0;
-  }
 }
 #build-detail-buttons {
   border: 1px solid;
